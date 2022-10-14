@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9787b90c-c3ee-46b9-abb1-b55e20ed911c": {
+      "ProjectGuid": "9787b90c-c3ee-46b9-abb1-b55e20ed911c",
+      "DisplayName": "StaffHelper.Model",
+      "ColorIndex": 0
+    },
+    "e16f3313-c2a2-4634-b513-f67db8c8dfa2": {
+      "ProjectGuid": "e16f3313-c2a2-4634-b513-f67db8c8dfa2",
+      "DisplayName": "StaffHelper.Migrations",
+      "ColorIndex": 1
+    },
+    "37c52ac5-650d-4502-b685-108f9811bc6b": {
+      "ProjectGuid": "37c52ac5-650d-4502-b685-108f9811bc6b",
+      "DisplayName": "StaffHelper.Migrations",
+      "ColorIndex": 2
+    },
+    "e2fa64e5-0ece-4b27-ab71-cb4addbcac52": {
+      "ProjectGuid": "e2fa64e5-0ece-4b27-ab71-cb4addbcac52",
+      "DisplayName": "StaffHelper.API",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
