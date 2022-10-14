@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\StaffHelper.Model\StaffHelper.Model.csproj" />
+	</ItemGroup>
+
+</Project>
