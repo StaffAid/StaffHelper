@@ -1525,6 +1525,7 @@
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.10",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.10",
+          "Microsoft.EntityFrameworkCore.UnitOfWork": "3.1.0",
           "StaffHelper.Model": "1.0.0"
         },
         "compile": {
@@ -1542,6 +1543,20 @@
         },
         "runtime": {
           "bin/placeholder/StaffHelper.Model.dll": {}
+        }
+      },
+      "StaffHelper.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.UnitOfWork": "3.1.0",
+          "StaffHelper.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StaffHelper.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StaffHelper.Service.dll": {}
         }
       }
     }
@@ -5624,6 +5639,11 @@
       "type": "project",
       "path": "../StaffHelper.Model/StaffHelper.Model.csproj",
       "msbuildProject": "../StaffHelper.Model/StaffHelper.Model.csproj"
+    },
+    "StaffHelper.Service/1.0.0": {
+      "type": "project",
+      "path": "../StaffHelper.Service/StaffHelper.Service.csproj",
+      "msbuildProject": "../StaffHelper.Service/StaffHelper.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5634,27 +5654,24 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.10",
       "Microsoft.EntityFrameworkCore.UnitOfWork >= 3.1.0",
       "StaffHelper.Migrations >= 1.0.0",
+      "StaffHelper.Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Habeebullah\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
       "projectName": "StaffHelper.API",
-      "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
-      "packagesPath": "C:\\Users\\Habeebullah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Habeebullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5668,8 +5685,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj": {
-              "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj"
+            "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj": {
+              "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj"
+            },
+            "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj": {
+              "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj"
             }
           }
         }
@@ -5719,12 +5739,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.22, 3.1.22]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5733,7 +5747,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
       }
     }
   }

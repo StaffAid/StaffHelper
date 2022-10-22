@@ -8,3 +8,13 @@ C:\Users\Habeebullah\Documents\Osise\StaffHelper\StaffHelper.Model\obj\Debug\net
 C:\Users\Habeebullah\Documents\Osise\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.csproj.CoreCompileInputs.cache
 C:\Users\Habeebullah\Documents\Osise\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.dll
 C:\Users\Habeebullah\Documents\Osise\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.pdb
+C:\Users\DELL\StaffHelper\StaffHelper.Model\bin\Debug\netcoreapp3.1\StaffHelper.Model.deps.json
+C:\Users\DELL\StaffHelper\StaffHelper.Model\bin\Debug\netcoreapp3.1\StaffHelper.Model.dll
+C:\Users\DELL\StaffHelper\StaffHelper.Model\bin\Debug\netcoreapp3.1\StaffHelper.Model.pdb
+C:\Users\DELL\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.csproj.AssemblyReference.cache
+C:\Users\DELL\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.AssemblyInfoInputs.cache
+C:\Users\DELL\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.AssemblyInfo.cs
+C:\Users\DELL\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.csproj.CoreCompileInputs.cache
+C:\Users\DELL\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.dll
+C:\Users\DELL\StaffHelper\StaffHelper.Model\obj\Debug\netcoreapp3.1\StaffHelper.Model.pdb

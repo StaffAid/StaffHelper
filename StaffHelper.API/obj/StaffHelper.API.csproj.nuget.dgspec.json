@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj": {}
+    "C:\\Users\\DELL\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj": {
+    "C:\\Users\\DELL\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
         "projectName": "StaffHelper.API",
-        "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
-        "packagesPath": "C:\\Users\\Habeebullah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Habeebullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +28,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj": {
-                "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj"
+              "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj": {
+                "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj"
+              },
+              "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj": {
+                "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj"
               }
             }
           }
@@ -82,12 +82,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.22, 3.1.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -96,24 +90,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj": {
+    "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj",
         "projectName": "StaffHelper.Migrations",
-        "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj",
-        "packagesPath": "C:\\Users\\Habeebullah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Migrations\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Habeebullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -127,8 +118,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj": {
-                "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj"
+              "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj": {
+                "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj"
               }
             }
           }
@@ -154,6 +145,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.UnitOfWork": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -171,24 +166,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj": {
+    "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj",
         "projectName": "StaffHelper.Model",
-        "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj",
-        "packagesPath": "C:\\Users\\Habeebullah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Model\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Model\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Habeebullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -228,7 +220,71 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj",
+        "projectName": "StaffHelper.Service",
+        "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj": {
+                "projectPath": "C:\\Users\\DELL\\StaffHelper\\StaffHelper.Model\\StaffHelper.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.UnitOfWork": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     }
