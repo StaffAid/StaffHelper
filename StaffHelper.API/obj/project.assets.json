@@ -1543,6 +1543,20 @@
         "runtime": {
           "bin/placeholder/StaffHelper.Model.dll": {}
         }
+      },
+      "StaffHelper.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.UnitOfWork": "3.1.0",
+          "StaffHelper.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StaffHelper.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StaffHelper.Service.dll": {}
+        }
       }
     }
   },
@@ -5624,6 +5638,11 @@
       "type": "project",
       "path": "../StaffHelper.Model/StaffHelper.Model.csproj",
       "msbuildProject": "../StaffHelper.Model/StaffHelper.Model.csproj"
+    },
+    "StaffHelper.Service/1.0.0": {
+      "type": "project",
+      "path": "../StaffHelper.Service/StaffHelper.Service.csproj",
+      "msbuildProject": "../StaffHelper.Service/StaffHelper.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5634,27 +5653,24 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.10",
       "Microsoft.EntityFrameworkCore.UnitOfWork >= 3.1.0",
       "StaffHelper.Migrations >= 1.0.0",
+      "StaffHelper.Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Habeebullah\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Sumayya Uthman\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
+      "projectUniqueName": "C:\\Users\\Sumayya Uthman\\Documents\\Big-Applications\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
       "projectName": "StaffHelper.API",
-      "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
-      "packagesPath": "C:\\Users\\Habeebullah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.API\\obj\\",
+      "projectPath": "C:\\Users\\Sumayya Uthman\\Documents\\Big-Applications\\StaffHelper\\StaffHelper.API\\StaffHelper.API.csproj",
+      "packagesPath": "C:\\Users\\Sumayya Uthman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sumayya Uthman\\Documents\\Big-Applications\\StaffHelper\\StaffHelper.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Habeebullah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sumayya Uthman\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5668,8 +5684,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj": {
-              "projectPath": "C:\\Users\\Habeebullah\\Documents\\Osise\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj"
+            "C:\\Users\\Sumayya Uthman\\Documents\\Big-Applications\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj": {
+              "projectPath": "C:\\Users\\Sumayya Uthman\\Documents\\Big-Applications\\StaffHelper\\StaffHelper.Migrations\\StaffHelper.Migrations.csproj"
+            },
+            "C:\\Users\\Sumayya Uthman\\Documents\\Big-Applications\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj": {
+              "projectPath": "C:\\Users\\Sumayya Uthman\\Documents\\Big-Applications\\StaffHelper\\StaffHelper.Service\\StaffHelper.Service.csproj"
             }
           }
         }
