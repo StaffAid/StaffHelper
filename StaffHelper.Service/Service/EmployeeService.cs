@@ -10,6 +10,8 @@ namespace StaffHelper.Service.Service
     public class EmployeeService: IEmployeeService
     {
         private readonly IUnitOfWork _unitOfWork;
+
+        //dependency injection
         public EmployeeService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -47,19 +49,19 @@ namespace StaffHelper.Service.Service
             }
             return new BaseResponse { Status = false, Message = "Employee profile already exist!"};
         }
-        public async Task<BaseResponse> DeleteProfile(Employee employee)
+        public async Task<BaseResponse> RemoveProfile(Employee employee)
         {
             var profile = _unitOfWork.GetRepository<Employee>().GetFirstOrDefault(x => x.Id == employee.Id, null, null, false);
 
             if (profile == null)
             {
+                profile.IsActive = false;
 
-                _unitOfWork.GetRepository<Employee>().Delete(profile);
+                _unitOfWork.GetRepository<Employee>().Update(profile);
                 await _unitOfWork.SaveChangesAsync();
 
                 return new BaseResponse { Status = true, Message = "Profile deleted successfully" };
             }
-
             return new BaseResponse { Status = false, Message = "Profile already exist!" };
         }
 

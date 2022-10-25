@@ -21,9 +21,9 @@ namespace StaffHelper.API.Controllers
             return Ok(result);
         }
         [HttpDelete("DeleteProfile")]
-        public async Task<IActionResult> DeleteProfile(Employee employee)
+        public async Task<IActionResult> RemoveProfile(Employee employee)
         {
-            var result = await _employeeService.DeleteProfile(employee);
+            var result = await _employeeService.RemoveProfile(employee);
             return Ok(result);
         }
 
