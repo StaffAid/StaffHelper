@@ -1,5 +1,6 @@
 ﻿using Arch.EntityFrameworkCore.UnitOfWork;
 using StaffHelper.Model.Entities;
+using StaffHelper.Model.ViewModels;
 using StaffHelper.Service.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,13 @@ namespace StaffHelper.Service.Services
         {
             _unitOfwork = unitOfwork;
         }
-
-        public async Task<List<CompanyUnit>> GetAll()
+        /// <summary>
+        /// "Get All"
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<CreateCompanyUnitViewModel>> GetAll()
         {
-            var companyUnit = _unitOfwork.GetRepository<CompanyUnit>().GetAll().ToList();
+            var companyUnit = _unitOfwork.GetRepository<CreateCompanyUnitViewModel>().GetAll().ToList();
 
             return companyUnit;
 
@@ -32,21 +36,26 @@ namespace StaffHelper.Service.Services
             //}
 
         }
-        public async Task<BaseResponse> CreateCompanyUnit(CompanyUnit model)
+        /// <summary>
+        /// "Create CompanyUnit"
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<BaseResponse> CreateCompanyUnit(CreateCompanyUnitViewModel model)
         {
-            var companyUnit = await _unitOfwork.GetRepository<CompanyUnit>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
+            var companyUnit = await _unitOfwork.GetRepository<CreateCompanyUnitViewModel>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
             if (model == null)
             {
-                var newCompanyunit = new CompanyUnit()
+                var newCompanyunit = new CreateCompanyUnitViewModel()
                 {
+
                     Id = Guid.NewGuid(),
-                    Company = model.Company,
                     CompanyId = model.CompanyId,
                     Name = model.Name,
                     CreatedDate = DateTime.Now,
 
                 };
-                await _unitOfwork.GetRepository<CompanyUnit>().InsertAsync(newCompanyunit);
+                await _unitOfwork.GetRepository<CreateCompanyUnitViewModel>().InsertAsync(newCompanyunit);
                 await _unitOfwork.SaveChangesAsync();
 
                 return new BaseResponse { Message = "CompanyUnit Created Successfully", Status = true };
@@ -54,40 +63,45 @@ namespace StaffHelper.Service.Services
 
             else return new BaseResponse { Message = "CompanyUnit Already Exist", Status = false };
         }
-
-        public async Task<CompanyUnit> GetByCompany(CompanyUnit model)
+        /// <summary>
+        /// "Get By CompanyId"
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<CreateCompanyUnitViewModel> GetByCompanyId(CreateCompanyUnitViewModel model)
         {
-            var companyUnit = await _unitOfwork.GetRepository<CompanyUnit>().GetFirstOrDefaultAsync(x => x.Company == model.Company, null, null, false);
+            var companyUnit = await _unitOfwork.GetRepository<CreateCompanyUnitViewModel>().GetFirstOrDefaultAsync( x => x.CompanyId == model.CompanyId, null , null , false);
             return companyUnit;
 
         }
-        public  async Task<CompanyUnit> GetByCompanyId(CompanyUnit model)
+        /// <summary>
+        /// "Get By CompanyUnit Name"
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<CreateCompanyUnitViewModel> GetByName(CreateCompanyUnitViewModel model)
         {
-            var companyUnit = await _unitOfwork.GetRepository<CompanyUnit>().GetFirstOrDefaultAsync( x => x.CompanyId == model.CompanyId, null , null , false);
+            var companyUnit = await _unitOfwork.GetRepository<CreateCompanyUnitViewModel>().GetFirstOrDefaultAsync(x => x.Name == model.Name, null, null, false);
             return companyUnit;
-
         }
-        public async Task<CompanyUnit> GetByName(CompanyUnit model)
+        /// <summary>
+        /// "Update CompanyUnit"
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<BaseResponse> UpdateCompanyUnit(UpdateCompanyUnitViewModel model)
         {
-            var companyUnit = await _unitOfwork.GetRepository<CompanyUnit>().GetFirstOrDefaultAsync(x => x.Name == model.Name, null, null, false);
-            return companyUnit;
-        }
-
-        public async Task<BaseResponse> UpdateCompanyUnit(CompanyUnit model)
-        {
-            var companyUnit = await _unitOfwork.GetRepository<CompanyUnit>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
+            var companyUnit = await _unitOfwork.GetRepository<UpdateCompanyUnitViewModel>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
             if (model != null)
             {
-                var newCompanyunit = new CompanyUnit()
+                var newCompanyunit = new UpdateCompanyUnitViewModel()
                 {
-                   
-                    Company = model.Company,
-                    CompanyId = model.CompanyId,
+                  
                     Name = model.Name,
                     UpdatedDate = DateTime.Now,
 
                 };
-                 _unitOfwork.GetRepository<CompanyUnit>().Update(newCompanyunit);
+                 _unitOfwork.GetRepository<UpdateCompanyUnitViewModel>().Update(newCompanyunit);
                 await _unitOfwork.SaveChangesAsync();
 
                 return new BaseResponse { Message = "CompanyUnit Updated Successfully", Status = true };
@@ -95,18 +109,22 @@ namespace StaffHelper.Service.Services
 
             else return new BaseResponse { Message = "CompanyUnit Does Not Exist", Status = false };
         }
-        public async Task<BaseResponse> DeleteCompanyUnit(CompanyUnit model)
+        /// <summary>
+        /// "SoftDelete CompanyUnit"
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<bool> SoftDeleteCompanyUnit(CreateCompanyUnitViewModel model)
         {
-            var companyUnit = await _unitOfwork.GetRepository<CompanyUnit>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
-            if (model!= null)
-            {
-                _unitOfwork.GetRepository<CompanyUnit>().Delete(companyUnit);
-                await _unitOfwork.SaveChangesAsync();
+            var company = await _unitOfwork.GetRepository<CreateCompanyUnitViewModel>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
+            company.SoftDelete = false;
 
-                return new BaseResponse { Message = "CompanyUnit Deleted Successfully", Status = true };
-            }
+            await _unitOfwork.GetRepository<CreateCompanyUnitViewModel>().InsertAsync(company);
+            await _unitOfwork.SaveChangesAsync();
 
-            else return new BaseResponse { Message = "CompanyUnit Does Not Exist", Status = false };
+            return false;
+
+
         }
 
     }

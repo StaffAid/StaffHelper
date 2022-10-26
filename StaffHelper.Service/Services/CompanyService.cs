@@ -1,5 +1,6 @@
 ﻿using Arch.EntityFrameworkCore.UnitOfWork;
 using StaffHelper.Model.Entities;
+using StaffHelper.Model.ViewModels;
 using StaffHelper.Service.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -23,21 +24,21 @@ namespace StaffHelper.Service.Services
         /// <param name="model"></param>
         /// <returns></returns>
 
-        public async Task<List<Company>> GetAll()
+        public async Task<List<CreateCompanyViewModel>> GetAll()
         {
-            var company = _unitOfwork.GetRepository<Company>().GetAll().ToList();
+            var company = _unitOfwork.GetRepository<CreateCompanyViewModel>().GetAll().ToList();
 
 
             return company;
         }
         /// <summary>
-        /// "Get By Id"
+        /// "Get By RcNo"
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public async Task<Company> GetById(Company model)
+        public async Task<CreateCompanyViewModel> GetByRcNo(CreateCompanyViewModel model)
         {
-            var company = await _unitOfwork.GetRepository<Company>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
+            var company = await _unitOfwork.GetRepository<CreateCompanyViewModel>().GetFirstOrDefaultAsync(x => x.RcNo == model.RcNo, null, null, false);
 
 
             return company;
@@ -47,21 +48,21 @@ namespace StaffHelper.Service.Services
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public async Task<Company> GetByName(Company model)
+        public async Task<CreateCompanyViewModel> GetByName(CreateCompanyViewModel model)
         {
-            var company = await _unitOfwork.GetRepository<Company>().GetFirstOrDefaultAsync(x => x.Name.ToUpper() == model.Name.ToUpper(),null, null, false);
+            var company = await _unitOfwork.GetRepository<CreateCompanyViewModel>().GetFirstOrDefaultAsync(x => x.Name.ToUpper() == model.Name.ToUpper(),null, null, false);
 
 
             return company;
         }
         /// <summary>
-        /// "Get By Company Email"
+        /// "Get By Company Address"
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public async Task<Company> GetByEmail(Company model)
+        public async Task<CreateCompanyViewModel> GetByAddress(CreateCompanyViewModel model)
         {
-            var company = await _unitOfwork.GetRepository<Company>().GetFirstOrDefaultAsync(x => x.Mail == model.Mail, null, null, false);
+            var company = await _unitOfwork.GetRepository<CreateCompanyViewModel>().GetFirstOrDefaultAsync(x => x.Address == model.Address, null, null, false);
 
 
             return company;
@@ -71,23 +72,23 @@ namespace StaffHelper.Service.Services
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public async Task<BaseResponse> CreateCompany(Company model)
+        public async Task<BaseResponse> CreateCompany(CreateCompanyViewModel model)
         {
-            var company = await _unitOfwork.GetRepository<Company>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
+            var company = await _unitOfwork.GetRepository<CreateCompanyViewModel>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
             if (model == null)
             {
-                var newCompany = new Company()
+                var newCompany = new CreateCompanyViewModel()
                 {
                     Id = Guid.NewGuid(),
                     Name = model.Name.ToUpper(),
                     Website = model.Website,
-                    Mail = model.Mail,
+                    Email = model.Email,
                     PhoneNumber = model.PhoneNumber,
                     Address = model.Address,
                     RcNo = model.RcNo,
                     CreatedDate = DateTime.Now,
                 };
-                await _unitOfwork.GetRepository<Company>().InsertAsync(newCompany);
+                await _unitOfwork.GetRepository<CreateCompanyViewModel>().InsertAsync(newCompany);
                 await _unitOfwork.SaveChangesAsync();
 
                 return new BaseResponse { Message = "Company Created Successfully", Status = true};
@@ -102,24 +103,22 @@ namespace StaffHelper.Service.Services
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public async Task<BaseResponse> UpdateCompany(Company model)
+        public async Task<BaseResponse> UpdateCompany(UpdateCompanyViewModel model)
         {
-            var company = await _unitOfwork.GetRepository<Company>().GetFirstOrDefaultAsync(x => x.Id == model.Id,null,null,false);
+            var company = await _unitOfwork.GetRepository<UpdateCompanyViewModel>().GetFirstOrDefaultAsync(x => x.Id == model.Id,null,null,false);
             
             if (model != null)
             {
 
-                var newCompany = new Company()
+                var newCompany = new UpdateCompanyViewModel()
                 {
                     Name = model.Name.ToUpper(),
-                    Website = model.Website,
-                    Mail = model.Mail,
+                    Email = model.Email,
                     PhoneNumber = model.PhoneNumber,
                     Address = model.Address,
-                    RcNo = model.RcNo,
                     UpdatedDate = DateTime.Now,
                 };
-                _unitOfwork.GetRepository<Company>().Update(newCompany);
+                _unitOfwork.GetRepository<UpdateCompanyViewModel>().Update(newCompany);
                 await _unitOfwork.SaveChangesAsync();
 
                 return new BaseResponse { Message = " Company Updated Successfully", Status = true };
@@ -130,23 +129,21 @@ namespace StaffHelper.Service.Services
 
         }
         /// <summary>
-        /// "Delete Company"
+        /// "SoftDelete Company"
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public async Task<BaseResponse> DeleteCompany(Company model)
+        public async Task<bool> SoftDeleteCompany(CreateCompanyViewModel model)
         {
-            var company = await _unitOfwork.GetRepository<Company>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
-            if (model!= null)
-            {
-                 _unitOfwork.GetRepository<Company>().Delete(company);
-                await _unitOfwork.SaveChangesAsync();
+            var company = await _unitOfwork.GetRepository<CreateCompanyViewModel>().GetFirstOrDefaultAsync(x => x.Id == model.Id, null, null, false);
+            company.SoftDelete = false;
 
-                return new BaseResponse { Message = " Company Deleted Successfully", Status = true };
-            }
+            await _unitOfwork.GetRepository<CreateCompanyViewModel>().InsertAsync(company);
+            await _unitOfwork.SaveChangesAsync();
 
+            return false;
 
-            else return new BaseResponse { Message = "Company Does Not Exist", Status = false };
+            
         }
 
 

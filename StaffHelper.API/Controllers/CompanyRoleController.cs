@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StaffHelper.Model.Entities;
+using StaffHelper.Model.ViewModels;
 using StaffHelper.Service.Interfaces;
 using System.Threading.Tasks;
 
@@ -23,7 +24,7 @@ namespace StaffHelper.API.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost("CreateCompanyRole")]
-        public async Task<IActionResult> CreateCompanyRole(CompanyRole model)
+        public async Task<IActionResult> CreateCompanyRole(CreateCompanyRoleViewModel model)
         {
             var response = await _companyRoleService.CreateCompanyRole(model);
             if (response == null)
@@ -46,29 +47,14 @@ namespace StaffHelper.API.Controllers
             }
             return Ok(response);
         }
-        /// <summary>
-        /// "Get By Company"
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        [HttpGet("GetByCompany")]
-        public async Task<IActionResult> GetByCompany(CompanyRole model)
-        {
-            var response = await _companyRoleService.GetByCompany(model);
-            if (response == null)
-            {
-                return BadRequest(response);
-            }
-            return Ok(response);
-
-        }
+        
         /// <summary>
         /// "Get By CompanyId"
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpGet("GetByCompanyId")]
-        public async Task<IActionResult> GetByCompanyId(CompanyRole model)
+        public async Task<IActionResult> GetByCompanyId(CreateCompanyRoleViewModel model)
         {
             var response = await _companyRoleService.GetByCompanyId(model);
             if (response == null)
@@ -79,27 +65,12 @@ namespace StaffHelper.API.Controllers
         }
       
         /// <summary>
-        /// "Get By Role"
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        [HttpGet("GetByRole")]
-        public async Task<IActionResult> GetByRole(CompanyRole model)
-        {
-            var response = await _companyRoleService.GetByRole(model);
-            if (response == null)
-            {
-                return BadRequest(response);
-            }
-            return Ok(response);
-        }
-        /// <summary>
         /// "Get By RoleId"
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpGet("GetByRoleId")]
-        public async Task<IActionResult> GetByRoleId(CompanyRole model)
+        public async Task<IActionResult> GetByRoleId(CreateCompanyRoleViewModel model)
         {
             var response = await _companyRoleService.GetByRoleId(model);
             if (response == null)
@@ -114,7 +85,7 @@ namespace StaffHelper.API.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPut("UpdateCompanyRole")]
-        public async Task<IActionResult> UpdateCompanyRole(CompanyRole model)
+        public async Task<IActionResult> UpdateCompanyRole(UpdateCompanyRoleViewModel model)
         {
             var response = await _companyRoleService.UpdateCompanyRole(model);
             if (response == null)
@@ -128,14 +99,11 @@ namespace StaffHelper.API.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        [HttpDelete("DeleteCompanyRole")]
-        public async Task<IActionResult> DeleteCompanyRole(CompanyRole model)
+        [HttpDelete("SoftDeleteCompanyRole")]
+        public async Task<IActionResult> SoftDeleteCompanyRole(CreateCompanyRoleViewModel model)
         {
-            var response = await _companyRoleService.DeleteCompanyRole(model);
-            if (response == null)
-            {
-                return BadRequest(response);
-            }
+            var response = await _companyRoleService.SoftDeleteCompanyRole(model);
+           
             return Ok(response);
         }
 

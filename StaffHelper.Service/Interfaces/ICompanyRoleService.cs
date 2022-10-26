@@ -1,4 +1,5 @@
 ﻿using StaffHelper.Model.Entities;
+using StaffHelper.Model.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,20 +7,20 @@ namespace StaffHelper.Service.Interfaces
 {
     public interface ICompanyRoleService
     {
-        Task<BaseResponse> CreateCompanyRole(CompanyRole model);
+        Task<BaseResponse> CreateCompanyRole(CreateCompanyRoleViewModel model);
         
-        Task<List<CompanyRole>> GetAll();
+        Task<List<CreateCompanyRoleViewModel>> GetAll();
 
-        Task<CompanyRole> GetByCompany(CompanyRole model);
+       
         
-        Task<CompanyRole> GetByCompanyId(CompanyRole model);
+        Task<CreateCompanyRoleViewModel> GetByCompanyId(CreateCompanyRoleViewModel model);
         
-        Task<CompanyRole> GetByRole(CompanyRole model);
+       
         
-        Task<CompanyRole> GetByRoleId(CompanyRole model);
+        Task<CreateCompanyRoleViewModel> GetByRoleId(CreateCompanyRoleViewModel model);
 
-        Task<BaseResponse> UpdateCompanyRole(CompanyRole model);
+        Task<BaseResponse> UpdateCompanyRole(UpdateCompanyRoleViewModel model);
 
-        Task<BaseResponse> DeleteCompanyRole(CompanyRole model);
+        Task<bool> DeleteCompanyRole(CreateCompanyRoleViewModel model);
     }
 }

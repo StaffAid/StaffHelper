@@ -1,4 +1,5 @@
 ﻿using StaffHelper.Model.Entities;
+using StaffHelper.Model.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,19 +7,19 @@ namespace StaffHelper.Service.Interfaces
 {
     public interface ICompanyService
     {
-        Task<List<Company>> GetAll();
+        Task<List<CreateCompanyViewModel>> GetAll();
 
-        Task<Company> GetById(Company model);
+        Task<CreateCompanyViewModel> GetByRcNo(CreateCompanyViewModel model);
 
-        Task<Company> GetByName(Company model);
+        Task<CreateCompanyViewModel> GetByName(CreateCompanyViewModel model);
         
-        Task<Company> GetByEmail(Company model);
+        Task<CreateCompanyViewModel> GetByAddress(CreateCompanyViewModel model);
         
-        Task<BaseResponse> CreateCompany(Company model);
+        Task<BaseResponse> CreateCompany(CreateCompanyViewModel model);
         
-        Task<BaseResponse> UpdateCompany(Company model);
-        
-        Task<BaseResponse> DeleteCompany(Company model);
+        Task<BaseResponse> UpdateCompany(UpdateCompanyViewModel model);
+
+        Task<bool> SoftDeleteCompany(CreateCompanyViewModel model);
 
     }
 }
