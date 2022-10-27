@@ -10,17 +10,13 @@ namespace StaffHelper.Service.Interfaces
         Task<BaseResponse> CreateCompanyRole(CreateCompanyRoleViewModel model);
         
         Task<List<CreateCompanyRoleViewModel>> GetAll();
-
-       
         
-        Task<CreateCompanyRoleViewModel> GetByCompanyId(CreateCompanyRoleViewModel model);
-        
-       
+        Task<CreateCompanyRoleViewModel> GetByCompanyId(CreateCompanyRoleViewModel model);        
         
         Task<CreateCompanyRoleViewModel> GetByRoleId(CreateCompanyRoleViewModel model);
 
         Task<BaseResponse> UpdateCompanyRole(UpdateCompanyRoleViewModel model);
 
-        Task<bool> DeleteCompanyRole(CreateCompanyRoleViewModel model);
+        Task<bool> SoftDeleteCompanyRole(CreateCompanyRoleViewModel model);
     }
 }

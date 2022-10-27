@@ -4,7 +4,10 @@ using System.Text;
 
 namespace StaffHelper.Model.ViewModels
 {
-    internal class UpdateCompanyRoleViewModel
+    public class UpdateCompanyRoleViewModel:BaseModel
     {
+        public string RoleId { get; set; }
+
+        public DateTime UpdatedDate { get; set; }
     }
 }

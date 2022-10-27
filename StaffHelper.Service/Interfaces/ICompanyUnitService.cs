@@ -9,10 +9,9 @@ namespace StaffHelper.Service.Interfaces
     {
         Task<List<CreateCompanyUnitViewModel>> GetAll();
         Task<BaseResponse> CreateCompanyUnit(CreateCompanyUnitViewModel model);
-       
         Task<CreateCompanyUnitViewModel> GetByCompanyId(CreateCompanyUnitViewModel model);
         Task<CreateCompanyUnitViewModel> GetByName(CreateCompanyUnitViewModel model);
-        Task<BaseResponse> UpdateCompanyUnit(UpdateCompanyUnitViewModel model);
+        Task<BaseResponse> UpdateCompanyUnit(UpdateCompanyUnitViewModel model);   
         Task<bool> SoftDeleteCompanyUnit(CreateCompanyUnitViewModel model);
 
     }

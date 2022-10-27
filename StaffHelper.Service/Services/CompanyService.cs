@@ -19,7 +19,7 @@ namespace StaffHelper.Service.Services
             _unitOfwork = unitOfwork;
         }
         /// <summary>
-        /// "Get All"
+        /// "Get All"                                                              
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -31,7 +31,7 @@ namespace StaffHelper.Service.Services
 
             return company;
         }
-        /// <summary>
+        /// <summary>   
         /// "Get By RcNo"
         /// </summary>
         /// <param name="model"></param>

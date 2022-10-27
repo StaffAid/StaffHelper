@@ -95,7 +95,7 @@ namespace StaffHelper.API.Controllers
             return Ok(response);
         }
         /// <summary>
-        /// "Delete ComapanyRole"
+        /// "SoftDelete ComapanyRole"
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
