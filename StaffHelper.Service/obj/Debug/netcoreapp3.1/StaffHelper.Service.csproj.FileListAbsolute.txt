@@ -1,0 +1,13 @@
+C:\Users\DELL\StaffHelper\StaffHelper.Service\bin\Debug\netcoreapp3.1\StaffHelper.Service.deps.json
+C:\Users\DELL\StaffHelper\StaffHelper.Service\bin\Debug\netcoreapp3.1\StaffHelper.Service.dll
+C:\Users\DELL\StaffHelper\StaffHelper.Service\bin\Debug\netcoreapp3.1\StaffHelper.Service.pdb
+C:\Users\DELL\StaffHelper\StaffHelper.Service\bin\Debug\netcoreapp3.1\StaffHelper.Model.dll
+C:\Users\DELL\StaffHelper\StaffHelper.Service\bin\Debug\netcoreapp3.1\StaffHelper.Model.pdb
+C:\Users\DELL\StaffHelper\StaffHelper.Service\obj\Debug\netcoreapp3.1\StaffHelper.Service.csproj.AssemblyReference.cache
+C:\Users\DELL\StaffHelper\StaffHelper.Service\obj\Debug\netcoreapp3.1\StaffHelper.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\StaffHelper\StaffHelper.Service\obj\Debug\netcoreapp3.1\StaffHelper.Service.AssemblyInfoInputs.cache
+C:\Users\DELL\StaffHelper\StaffHelper.Service\obj\Debug\netcoreapp3.1\StaffHelper.Service.AssemblyInfo.cs
+C:\Users\DELL\StaffHelper\StaffHelper.Service\obj\Debug\netcoreapp3.1\StaffHelper.Service.csproj.CoreCompileInputs.cache
+C:\Users\DELL\StaffHelper\StaffHelper.Service\obj\Debug\netcoreapp3.1\StaffHelper.Service.csproj.CopyComplete
+C:\Users\DELL\StaffHelper\StaffHelper.Service\obj\Debug\netcoreapp3.1\StaffHelper.Service.dll
+C:\Users\DELL\StaffHelper\StaffHelper.Service\obj\Debug\netcoreapp3.1\StaffHelper.Service.pdb

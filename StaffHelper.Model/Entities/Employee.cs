@@ -17,5 +17,7 @@ namespace StaffHelper.Model.Entities
         public Guid CompanyUnitId { get; set; }
         public CompanyDesignation CompanyDesignation { get; set; }
         public Guid CompanyDesignationId { get; set; }
+        public bool IsActive { get; set; }
+       
     }
 }
