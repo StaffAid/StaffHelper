@@ -30,7 +30,7 @@ namespace StaffHelper.Service.Services
             {
                 var newCompanyDesignation = new CreateCompanyDesignationViewModel()
                 {
-                    Id = Guid.NewGuid(),
+                    Id = Guid.NewGuid(),       
                     Name = model.Name,
                     CompanyId = model.CompanyId,
                     CreatedDate = DateTime.Now,
